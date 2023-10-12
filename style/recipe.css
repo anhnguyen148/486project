@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+:root {
+    --lobster: 'Lobster', cursive;
+    --caveat: 'Caveat', cursive;
+    --inria: 'Inria Sans', sans-serif;
+    --satisfy: 'Satisfy', cursive;
+    --main-color: blanchedalmond;
+}
+
+body {
+    background-image: url("../assets/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--main-color);
+    font-family: var(--inria);
+}
+
+.main-content {
+    padding: 2rem 2rem 8rem 2rem;
+}
+
+.h2-header {
+    font-family: var(--lobster);
+    color: var(--main-color);
+    font-size: 3rem;
+    padding: 1rem 0rem;
+    text-align: center;
+}
+
+.recipe-name {
+    font-family: var(--caveat);
+    font-size: 2.5rem;
+}
+
+.hr-line {
+    border-top: 5px dotted blanchedalmond;
+    opacity: 100%;
+    background-image: url("../assets/bg.jpg");
+    margin: 48px 0px;
+}
+
+.btn {
+    margin: 10px;
+    padding: 15px 30px;
+    font-size: large;
+    border-radius: 2rem;
+    /* background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%); */
+    color: white;
+    border: none;
+    transition: 0.5s;
+    cursor: pointer;
+    border: 2px solid#F09819;
+}
+
+.btn:hover {
+    background-position: right center;
+    background-image: linear-gradient(45deg, #FF512F 0%, #F09819 51%, #FF512F 100%);
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn:active {
+    transform: scale(0.95);
+    background-image: linear-gradient(45deg, #FF512F 0%, #F09819 51%, #FF512F 100%);
+}
+
+.btn-small {
+    margin: 7px;
+    padding: 10px 20px;
+    font-size: medium;
+    border-radius: 2rem;
+    /* background-color: transparent; */
+    background-image: linear-gradient(45deg, #FF512F 0%, #F09819 51%, #FF512F 100%);
+    color: white;
+    border: none;
+    transition: 0.5s;
+    cursor: pointer;
+    border: 2px solid#F09819;
+}
+
+.btn-small:hover {
+    padding: 13px 23px;
+}
+
+.button-87 {
+    margin: 10px;
+    padding: 15px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 2rem;
+    /* display: block; */
+    border: 0px;
+    font-weight: 700;
+    box-shadow: 0px 0px 14px -7px #f09819;
+    background-image: linear-gradient(45deg, #FF512F 0%, #F09819 51%, #FF512F 100%);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-87:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+.button-87:active {
+    transform: scale(0.95);
+}
+
+/*////////////////////////////*/
+/*            NAVBAR          */
+/*////////////////////////////*/
+.bg-dark {
+    background-image: url("../assets/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar {
+    padding: 0.5rem;
+}
+
+.nav-item {
+    padding: 0rem 1rem;
+}
+
+.nav-link {
+    font-size: larger;
+}
