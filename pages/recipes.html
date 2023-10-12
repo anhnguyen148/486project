@@ -7,6 +7,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <link rel="stylesheet" href="../style/recipe.css">
   <title>All Recipes</title>
 </head>
@@ -43,15 +45,203 @@
       </div>
     </nav>
     <!-- END NAVBAR -->
+
+    <!-- SEARCH BAR -->
+    <div class="search container-fluid mt-5 pb-2">
+      <div class="row justify-content-center">
+        <div class="col-lg-5 col-md-11 col-sm-11 text-center">
+          <form action="">
+            <div class="form-control">
+              <input type="text" name="search-value" required>
+              <label id="search-label">
+                <span style="transition-delay:0ms">I</span> <span style="transition-delay:50ms">w</span><span style="transition-delay:100ms">a</span><span style="transition-delay:150ms">n</span><span style="transition-delay:250ms">t</span> <span style="transition-delay:300ms">t</span><span style="transition-delay:350ms">o</span> <span style="transition-delay:400ms">m</span><span style="transition-delay:450ms">a</span><span style="transition-delay:500ms">k</span><span style="transition-delay:550ms">e</span> <span style="transition-delay:600ms">.</span><span style="transition-delay:650ms">.</span><span style="transition-delay:700ms">.</span>
+              </label>
+            </div>
+          </form>
+        </div>
+        <div class="col-1 pt-5">
+          <i class="fa-solid fa-magnifying-glass" style="font-size: 20px;"></i>
+        </div>
+      </div>
+    </div>
+    <!-- END SEARCH NAR -->
+    
+    <!-- CATEGORIES -->
+    <div class="categories container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-12 col-sm-12 text-center">
+          <button class="btn">Breakfast</button><button class="btn">Lunch</button><button class="btn">Dinner</button><button class="btn">Dessert</button>
+        </div>
+      </div>
+    </div>
+    <!-- END CATEGORIES -->
+  </div>
+
+  <div class="recipes-list">
+    <!-- SPECIA RECIPE -->
+    <div class="container-fluid">
+      <h3 class="h3-header">Special Recipe</h3>
+      <hr class="thin-line"></hr>
+      <div class="row mt-5 justify-content-center">
+        <div class="col-4 text-center">
+          <img class="special-recipe-img" src="../assets/salad-bowl.jpg" alt="salad bowl">
+        </div>
+        <div class="col-4 text-center">
+          <div class="special-recipe-box">
+            <h2 class="special-recipe-name">Avocado Salad with Ranch Dressing</h2>
+            <p class="level">Level: Easy</p>
+          </div>
+          <div class="special-recipe-detail">
+            <p>A harmonious fusion of smooth, ripe avocados and the zesty allure of ranch dressing. This salad is a burst of flavor and texture that promises to satisfy your taste buds with every bite.</p>
+            <button class="btn-small" role="button">Try this out</button>
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Cheese Burger</h4>
+                <div class="heart-container" title="Like">
+                  <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+                  <div class="svg-container">
+                      <svg viewBox="0 0 24 24" class="svg-outline" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                          </path>
+                      </svg>
+                      <svg viewBox="0 0 24 24" class="svg-filled" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                          </path>
+                      </svg>
+                      <svg class="svg-celebrate" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                          <polygon points="10,10 20,20"></polygon>
+                          <polygon points="10,50 20,50"></polygon>
+                          <polygon points="20,80 30,70"></polygon>
+                          <polygon points="90,10 80,20"></polygon>
+                          <polygon points="90,50 80,50"></polygon>
+                          <polygon points="80,80 70,70"></polygon>
+                      </svg>
+                  </div>
+              </div>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <img class="modal-img" src="../assets/burger.jpg" alt="Burger">
+                  </div>
+                  <div class="col-lg-6">
+                    <p >Some text in the modal.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button role="button" class="button-close" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END SPECIAL RECIPE -->
+
+
+    <!-- RECIPES LIST -->
+    <div class="container-fluid">
+      <div class="row mt-5 pb-5">
+        <h3 class="h3-header">All Recipes</h3>
+        <hr class="thin-line"></hr>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="card recipe">
+            <div class="card-image">
+              <img src="../assets/burger.jpg">
+            </div>
+            <div class="card-text">
+              <p class="card-meal-type">Dinner</p>
+              <h2 class="recipe-name">Cheese Burger</h2>
+              <p>Eggs Benedict with hollandaise sauce, crispy bacon and an assortment of garden herbs.</p>
+              <button class="btn-small">Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="card recipe">
+            <div class="card-image">
+              <img src="../assets/baos.jpg">
+            </div>
+            <div class="card-text">
+              <p class="card-meal-type">Breakfast</p>
+              <h2 class="recipe-name">Cheese Burger</h2>
+              <p>Eggs Benedict with hollandaise sauce, crispy bacon and an assortment of garden herbs.</p>
+              <button class="btn-small">Details</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="card recipe">
+            <div class="card-image">
+              <img src="../assets/pizza.jpg">
+            </div>
+            <div class="card-text">
+              <p class="card-meal-type">Breakfast</p>
+              <h2 class="recipe-name">Cheese Burger</h2>
+              <p>Eggs Benedict with hollandaise sauce, crispy bacon and an assortment of garden herbs.</p>
+              <button class="btn-small">Details</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="card recipe">
+            <div class="card-image">
+              <img src="../assets/ribs.jpg">
+            </div>
+            <div class="card-text">
+              <p class="card-meal-type">Breakfast</p>
+              <h2 class="recipe-name">Cheese Burger</h2>
+              <p>Eggs Benedict with hollandaise sauce, crispy bacon and an assortment of garden herbs.</p>
+              <button class="btn-small">Details</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="card recipe">
+            <div class="card-image">
+              <img src="../assets/dumpling.jpg">
+            </div>
+            <div class="card-text">
+              <p class="card-meal-type">Breakfast</p>
+              <h2 class="recipe-name">Cheese Burger</h2>
+              <p>Eggs Benedict with hollandaise sauce, crispy bacon and an assortment of garden herbs.</p>
+              <button class="btn-small">Details</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="card recipe">
+            <div class="card-image">
+              <img src="../assets/salad.jpg">
+            </div>
+            <div class="card-text">
+              <p class="card-meal-type">Breakfast</p>
+              <h2 class="recipe-name">Cheese Burger</h2>
+              <p>Eggs Benedict with hollandaise sauce, crispy bacon and an assortment of garden herbs.</p>
+              <button class="btn-small">Details</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- END RECIPES LIST -->
+
   </div>
 
 
 
 
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.7.0.min.js"
-    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="../js/main.js"></script>
 </body>
 
 </html>
