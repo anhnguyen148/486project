@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 
 
@@ -30,7 +29,7 @@ button {
 
 .main-content {
     padding: 2rem 2rem 2rem 2rem;
-    background-image: url("../assets/bg-full.jpg");
+    background-image: url("../assets/bg.jpg");
 }
 
 .h2-header {
@@ -43,7 +42,8 @@ button {
 
 .h3-header {
     color: black;
-    font-family: var(--lobster);
+    font-family: var(--caveat);
+    font-size: 3rem;
 }
 
 .level {
@@ -105,7 +105,7 @@ button {
 }
 
 .btn-small:hover,
-.button-close:hover {
+.button-close {
     color: #1D1C20;
 }
 
@@ -113,6 +113,23 @@ button {
     color: #1D1C20;
 }
 
+.btn-rmv {
+    margin: 7px;
+    padding: 10px 20px;
+    font-size: medium;
+    border-radius: 2rem;
+    background-color: black;
+    color: white;
+    border: none;
+    transition: 0.2s;
+    cursor: pointer;
+    border: 2px solid#F09819;
+    float: right;
+}
+
+.btn-rmv:hover {
+    color: #F09819;
+}
 
 .button-87 {
     margin: 10px;
@@ -167,99 +184,35 @@ button {
 }
 
 /*////////////////////////////*/
-/*         SEARCH BAR         */
+/*            ABOUT           */
 /*////////////////////////////*/
-.form-control {
-    position: relative;
-    margin: 20px 0 40px;
-    background-color: transparent;
-    border: none;
-}
-
-#search-label {
-    font-family: var(--caveat);
-    font-size: 2.5rem;
-}
-
-.form-control input {
-    background-color: transparent;
-    border: 0;
-    border-bottom: 2px var(--main-color) solid;
-    display: block;
-    width: 450px;
-    padding: 15px 0;
-    font-size: 18px;
-    color: #fff;
-}
-
-.form-control input:focus,
-.form-control input:valid {
-    outline: 0;
-    border-bottom-color: rgb(255, 172, 139);
-}
-
-.form-control label {
-    position: absolute;
-    top: 0;
-    left: 10px;
-    pointer-events: none;
-}
-
-.form-control label span {
-    display: inline-block;
-    min-width: 5px;
+.about-h1 {
+    font-family: var(--lobster);
     color: var(--main-color);
-    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    font-size: 5rem;
+    padding: 0rem;
+    margin: 0px;
 }
 
-.form-control input:focus+label span,
-.form-control input:valid+label span {
-    color: rgb(255, 172, 139);
-    transform: translateY(-50px);
-}
-
-/*////////////////////////////*/
-/*      SPECIAL RECIPES       */
-/*////////////////////////////*/
-.special-recipe-img {
-    opacity: 1;
-    display: block;
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-    transition: .5s ease;
-    backface-visibility: hidden;
-}
-
-.special-recipe-box {
-    position: absolute;
-    background-color: white;
-    padding: 5px 20px;
-    margin-left: -200px;
-    margin-top: 50px;
-    text-align: left;
-}
-
-.special-recipe-name {
+.about-content {
     color: black;
-    font-family: var(--caveat);
-    font-size: 50px;
-}
-
-.special-recipe-detail {
-    color: black;
-    font-size: 20px;
-    margin-top: 200px;
-    text-align: left;
 }
 
 /*////////////////////////////*/
-/*       RECIPES LIST         */
+/*            PROFILE         */
 /*////////////////////////////*/
+.profile-h1 {
+    font-family: var(--lobster);
+    color: var(--main-color);
+    font-size: 5rem;
+    padding: 0rem;
+    margin: 0px;
+}
+
 .recipes-list {
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 2rem 4rem;
+    padding: 4rem;
 }
 
 .card.recipe {

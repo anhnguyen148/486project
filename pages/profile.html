@@ -11,7 +11,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="../style/recipe.css">
+  <link rel="stylesheet" href="../style/about.css">
   <title>All Recipes</title>
 </head>
 
@@ -38,89 +38,28 @@
               <a class="nav-link" href="recipes.html" style="color: blanchedalmond;">Recipes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="profile.html"><i class="fa-regular fa-circle-user" style="color: blanchedalmond;"></i></a>
+              <a class="nav-link" href="#"><i class="fa-regular fa-circle-user" style="color: blanchedalmond;"></i></a>
             </li>
           </ul>
-          <!-- <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form> -->
         </div>
       </div>
     </nav>
     <!-- END NAVBAR -->
 
-    <!-- SEARCH BAR -->
-    <div class="search container-fluid mt-5 pb-2">
+    <div class="profile-title container-fluid pt-5">
       <div class="row justify-content-center">
-        <div class="col-lg-4 col-md-11 col-sm-11 text-center">
-          <form action="">
-            <div class="form-control">
-              <input type="text" id="search-value" name="search-value" required />
-              <label id="search-label">
-                <span style="transition-delay:0ms">I</span> <span style="transition-delay:50ms">w</span><span
-                  style="transition-delay:100ms">a</span><span style="transition-delay:150ms">n</span><span
-                  style="transition-delay:250ms">t</span> <span style="transition-delay:300ms">t</span><span
-                  style="transition-delay:350ms">o</span> <span style="transition-delay:400ms">m</span><span
-                  style="transition-delay:450ms">a</span><span style="transition-delay:500ms">k</span><span
-                  style="transition-delay:550ms">e</span> <span style="transition-delay:600ms">.</span><span
-                  style="transition-delay:650ms">.</span><span style="transition-delay:700ms">.</span>
-              </label>
-            </div>
-          </form>
-        </div>
-        <div class="col-1 pt-5">
-          <i class="fa-solid fa-magnifying-glass" style="font-size: 20px;"></i>
+        <div class="col-md-12 text-center">
+          <h1 class="profile-h1">Hello Anh Nguyen</h1>
         </div>
       </div>
     </div>
-    <!-- END SEARCH NAR -->
-
-    <!-- CATEGORIES -->
-    <div class="categories container-fluid">
-      <div class="row justify-content-center">
-        <div class="col-lg-6 col-md-12 col-sm-12 text-center">
-          <button class="btn">Breakfast</button><button class="btn">Lunch</button><button
-            class="btn">Dinner</button><button class="btn">Dessert</button>
-        </div>
-      </div>
-    </div>
-    <!-- END CATEGORIES -->
   </div>
 
-  <!-- RECIPES -->
-  <div class="recipes-list">
-    <!-- SPECIA RECIPE -->
+  <!-- FAVORITE RECIPES -->
+  <div class="recipe-list container-fluid pt-5">
     <div class="container-fluid">
-      <div class="row justify-content-center">
-        <h3 class="h3-header">Special Recipe</h3>
-        <hr class="thin-line">
-        </hr>
-        <div class="special-recipe-container row justify-content-center">
-          <div class="col-4 text-center">
-            <img class="special-recipe-img" src="../assets/salad-bowl.jpg" alt="salad bowl">
-          </div>
-          <div class="col-4 text-center">
-            <div class="special-recipe-box">
-              <h2 class="special-recipe-name">Avocado Salad with Ranch Dressing</h2>
-              <p class="level">Level: Easy</p>
-            </div>
-            <div class="special-recipe-detail">
-              <p>A harmonious fusion of smooth, ripe avocados and the zesty allure of ranch dressing. This salad is a
-                burst of flavor and texture that promises to satisfy your taste buds with every bite.</p>
-              <button class="btn-small" role="button">Try this out</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- END SPECIAL RECIPE -->
-
-
-    <!-- RECIPES LIST -->
-    <div class="container-fluid">
-      <div class="row mt-5 pb-5">
-        <h3 class="h3-header">All Recipes</h3>
+      <div class="row">
+        <h3 class="h3-header text-center">Your favorite recipes</h3>
         <hr class="thin-line">
         </hr>
         <div class="recipes-list-container row">
@@ -133,86 +72,15 @@
                 <p class="card-meal-type">Dinner</p>
                 <h2 class="recipe-name">Cheese Burger</h2>
                 <p>Eggs Benedict with hollandaise sauce, crispy bacon and an assortment of garden herbs.</p>
-                <button class="btn-small">Details</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="card recipe">
-              <div class="card-image">
-                <img src="../assets/baos.jpg">
-              </div>
-              <div class="card-text">
-                <p class="card-meal-type">Breakfast</p>
-                <h2 class="recipe-name">Cheese Burger</h2>
-                <p>Eggs Benedict with hollandaise sauce, crispy bacon and an assortment of garden herbs.</p>
-                <button class="btn-small">Details</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="card recipe">
-              <div class="card-image">
-                <img src="../assets/pizza.jpg">
-              </div>
-              <div class="card-text">
-                <p class="card-meal-type">Breakfast</p>
-                <h2 class="recipe-name">Cheese Burger</h2>
-                <p>Eggs Benedict with hollandaise sauce, crispy bacon and an assortment of garden herbs. Eggs Benedict
-                  with hollandaise sauce.</p>
-                <button class="btn-small">Details</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="card recipe">
-              <div class="card-image">
-                <img src="../assets/ribs.jpg">
-              </div>
-              <div class="card-text">
-                <p class="card-meal-type">Breakfast</p>
-                <h2 class="recipe-name">Cheese Burger</h2>
-                <p>Eggs Benedict with hollandaise sauce, crispy bacon and an assortment of garden herbs.</p>
-                <button class="btn-small">Details</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="card recipe">
-              <div class="card-image">
-                <img src="../assets/dumpling.jpg">
-              </div>
-              <div class="card-text">
-                <p class="card-meal-type">Breakfast</p>
-                <h2 class="recipe-name">Cheese Burger</h2>
-                <p>Eggs Benedict with hollandaise sauce, crispy bacon and an assortment of garden herbs.</p>
-                <button class="btn-small">Details</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="card recipe">
-              <div class="card-image">
-                <img src="../assets/salad.jpg">
-              </div>
-              <div class="card-text">
-                <p class="card-meal-type">Breakfast</p>
-                <h2 class="recipe-name">Cheese Burger</h2>
-                <p>Eggs Benedict with hollandaise sauce, crispy bacon and an assortment of garden herbs.</p>
-                <button class="btn-small">Details</button>
+                <button class="btn-small">Details</button><button class="btn-rmv">Remove</button>
               </div>
             </div>
           </div>
         </div>
-
-
       </div>
     </div>
-    <!-- END RECIPES LIST -->
-
   </div>
-  <!-- END RECIPES -->
+  <!-- END FAVORITE RECIPES -->
 
   <!-- MODAL -->
   <div class="modal fade" id="myModal" role="dialog">
@@ -286,7 +154,6 @@
                     </ul>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
@@ -298,6 +165,7 @@
     </div>
   </div>
   <!-- END MODAL -->
+
 
 
 
