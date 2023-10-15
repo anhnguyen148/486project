@@ -12,3 +12,14 @@ Welcome to the "Savory Journey" recipe website! This is a platform dedicated to 
 
 - **User experience:** Our website works best on desktop browser.
 
+## Technologies Used
+
+- **Frontend:** HTML, CSS, Bootstrap 5, Vanilla JavaScript, jQuery
+
+- **Backend:** Node.js, Express.js
+
+- **Database:** MySQL
+
+- **User Authentication:** JSON Web Tokens (JWT)
+
+
