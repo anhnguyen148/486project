@@ -11,7 +11,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="../style/about.css">
+  <link rel="stylesheet" href="style/recipe.css">
   <title>All Recipes</title>
 </head>
 
@@ -25,7 +25,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <a class="navbar-brand" href="../index.html" style="color: blanchedalmond; font-family: var(--caveat);">SAVORY JOURNEY</a>
+          <a class="navbar-brand" href="index.html" style="color: blanchedalmond; font-family: var(--caveat);">SAVORY JOURNEY</a>
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="about.html" style="color: blanchedalmond;">About</a>
@@ -41,29 +41,69 @@
               <a class="nav-link" href="profile.html"><i class="fa-regular fa-circle-user" style="color: blanchedalmond;"></i></a>
             </li>
           </ul>
+          <!-- <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form> -->
         </div>
       </div>
     </nav>
-    <!-- END NAVBAR -->
 
-    <div class="about-title container-fluid pt-5">
+    <!-- SEARCH BAR -->
+    <div class="search container-fluid mt-5 pb-2">
       <div class="row justify-content-center">
-        <div class="col-md-12 text-center">
-          <h1 class="about-h1">About Us</h1>
+        <div class="col-lg-4 col-md-11 col-sm-11 text-center">
+          <form action="">
+            <div class="form-control">
+              <input type="text" id="search-value" name="search-value" required />
+              <label id="search-label">
+                <span style="transition-delay:0ms">I</span> <span style="transition-delay:50ms">w</span><span
+                  style="transition-delay:100ms">a</span><span style="transition-delay:150ms">n</span><span
+                  style="transition-delay:250ms">t</span> <span style="transition-delay:300ms">t</span><span
+                  style="transition-delay:350ms">o</span> <span style="transition-delay:400ms">m</span><span
+                  style="transition-delay:450ms">a</span><span style="transition-delay:500ms">k</span><span
+                  style="transition-delay:550ms">e</span> <span style="transition-delay:600ms">.</span><span
+                  style="transition-delay:650ms">.</span><span style="transition-delay:700ms">.</span>
+              </label>
+            </div>
+          </form>
+        </div>
+        <div class="col-1 pt-5">
+          <i class="fa-solid fa-magnifying-glass" style="font-size: 20px;"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- CATEGORIES -->
+    <div class="categories container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-12 col-sm-12 text-center">
+          <button class="btn">Breakfast</button><button class="btn">Lunch</button><button
+            class="btn">Dinner</button><button class="btn">Dessert</button>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="about-content container-fluid pt-5">
-    <div class="row justify-content-center">
-      <div class="col-lg-6 col-md-12 col-sm-12">
-        <p>Welcome to Savory Journey, your delectable portal to a world of culinary exploration and gastronomic delight. Our passion for food is not just about satisfying the stomach but also about feeding the soul with experiences, flavors, and stories that transcend borders and cultures. Savory Journey is a labor of love born from the collective enthusiasm of diverse individuals, each with their unique culinary expertise and backgrounds. We've come together to create a space where the art of cooking and the joy of savoring a meal take center stage.<br><br>On our website, you'll find more than just recipes and travel anecdotes. It's a testament to our insatiable curiosity and our enduring love affair with the culinary arts. Whether you're a seasoned chef in search of innovative techniques, a curious food enthusiast yearning to expand your palate, or someone simply seeking that perfect dish to impress your loved ones, you'll discover a world of inspiration here. We celebrate the stories behind each dish, the hands that lovingly prepare them, and the cultures that foster their creation. So, whether you're looking for a taste of nostalgia, an exotic adventure, or a dash of kitchen inspiration, Savory Journey is here to share our love for food and exploration with you. Join us on this delectable odyssey, and let's savor the world one bite at a time. Bon appétit, and let the culinary adventure begin!</p>
-        <p class="text-end" style="font-family: var(--sacra); font-size: 2rem;">Savory Journey</p>
+  <!-- RECIPES -->
+  <div class="recipes-list">
+    <!-- SPECIAL RECIPE -->
+    <div class="special-recipe-container container-fluid"></div>
+    <!-- RECIPES LIST -->
+    <div class="container-fluid">
+      <div class="row mt-5 pb-5">
+        <h3 class="h3-header">All Recipes</h3>
+        <hr class="thin-line">
+        </hr>
+        <div class="recipes-list-container row"></div>
       </div>
     </div>
   </div>
 
+  <!-- MODAL -->
+  <div class="modal fade myModal" id="myModal" role="dialog">
+    <div class="modal-dialog"></div>
+  </div>
 
 
 

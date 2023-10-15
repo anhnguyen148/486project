@@ -71,7 +71,8 @@ body {
     background-image: linear-gradient(45deg, #FF512F 0%, #F09819 51%, #FF512F 100%);
 }
 
-.btn-small {
+.btn-small,
+.button-close {
     margin: 7px;
     padding: 10px 20px;
     font-size: medium;
@@ -83,10 +84,16 @@ body {
     transition: 0.2s;
     cursor: pointer;
     border: 2px solid#F09819;
+    float: right;
 }
 
-.btn-small:hover {
-    padding: 13px 23px;
+.btn-small:hover,
+.button-close:hover {
+    color: #1D1C20;
+}
+
+.btn-close:hover{
+    color: #1D1C20;
 }
 
 .button-87 {
@@ -203,6 +210,11 @@ body {
 /*////////////////////////////*/
 /*       LATEST RECIPE        */
 /*////////////////////////////*/
+.latest-recipe {
+    padding-left: 11rem;
+    padding-right: 11rem;
+}
+
 .card {
     overflow: visible;
     width: 330px;
@@ -593,6 +605,190 @@ input:checked~.checkmark {
 .arrow-icon {
     font-size: 15px;
     font-weight: 500;
+}
+
+/*////////////////////////////*/
+/*            MODAL           */
+/*////////////////////////////*/
+.modal-dialog {
+    max-width: 90%;
+    margin: 1.75rem auto;
+}
+
+.fade {    
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+}
+
+.modal-content {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: none;
+}
+
+.modal-title {
+    font-family: var(--caveat);
+    font-size: 3rem;
+    font-weight: 700;
+    color: black;
+}
+
+.modal-header {
+    justify-content: space-between;
+    border: none;
+}
+
+.modal-footer {
+    border: none;
+}
+
+.modal-img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.sub-line {
+    margin: 2.5rem 0rem 1rem 0rem;
+    border-top: 2px solid black;
+    opacity: 1;
+}
+
+.heart-container {
+    --heart-color: rgb(255, 91, 137);
+    position: relative;
+    width: 50px;
+    height: 50px;
+    transition: .3s;
+}
+
+.heart-container .checkbox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 20;
+    cursor: pointer;
+}
+
+.heart-container .svg-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart-container .svg-outline,
+.heart-container .svg-filled {
+    fill: var(--heart-color);
+    position: absolute;
+}
+
+.heart-container .svg-filled {
+    animation: keyframes-svg-filled 1s;
+    display: none;
+}
+
+.heart-container .svg-celebrate {
+    position: absolute;
+    animation: keyframes-svg-celebrate .5s;
+    animation-fill-mode: forwards;
+    display: none;
+    stroke: var(--heart-color);
+    fill: var(--heart-color);
+    stroke-width: 2px;
+}
+
+.heart-container .checkbox:checked~.svg-container .svg-filled {
+    display: block
+}
+
+.heart-container .checkbox:checked~.svg-container .svg-celebrate {
+    display: block
+}
+
+@keyframes keyframes-svg-filled {
+    0% {
+        transform: scale(0);
+    }
+
+    25% {
+        transform: scale(1.2);
+    }
+
+    50% {
+        transform: scale(1);
+        filter: brightness(1.5);
+    }
+}
+
+@keyframes keyframes-svg-celebrate {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        opacity: 1;
+        filter: brightness(1.5);
+    }
+
+    100% {
+        transform: scale(1.4);
+        opacity: 0;
+        display: none;
+    }
+}
+
+.recipe-direction {
+    border: #f0ba195d 1px solid;
+    border-radius: 30px;
+    color: black;
+    box-shadow: 0px 0px 15px -7px #faab3b;
+    padding: 40px 40px;
+    font-size: large;
+    height: 550px;
+    overflow: auto;
+    background-color: white;
+}
+
+.yellow-line {
+    border-top: 1px solid #F09819;
+    opacity: 100%;
+    margin: 0rem 0rem 1rem 0rem;
+}
+
+.fa-solid.fa-paper-plane,
+.fa-solid.fa-fire {
+    color: #F09819;
+}
+
+.modal-subheader {
+    font-family: var(--sacra);
+    font-size: 3rem;
+    color: black;
+}
+
+ul li::marker {
+    font-size: 0.7rem;
+    color: #F09819;
+}
+
+.recipe-direction::-webkit-scrollbar {
+    width: 7px;
+}
+
+.recipe-direction::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 25px;
+    margin: 40px 0px;
+}
+
+.recipe-direction::-webkit-scrollbar-thumb {
+    background: #f5c076;
+    border-radius: 25px;
+}
+
+.recipe-direction::-webkit-scrollbar-thumb:hover {
+    background: #faaa39;
 }
 
 /*////////////////////////////*/
