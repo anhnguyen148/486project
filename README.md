@@ -2,7 +2,7 @@
 
 Welcome to the "Savory Journey" recipe website! This is a platform dedicated to food enthusiasts and home chefs, allowing you to explore a world of flavors, cultures, and culinary traditions. Whether you're looking for mouthwatering recipes, culinary inspiration, or simply a culinary adventure, you've come to the right place.
 
-## Authors
+## Contributing
 - [Anh Nguyen](https://github.com/anhnguyen148) - Frontend
 - [Aaron Phenicie](https://github.com/phenicieaaron) - Backend
 
