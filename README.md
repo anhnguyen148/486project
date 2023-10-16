@@ -22,4 +22,18 @@ Welcome to the "Savory Journey" recipe website! This is a platform dedicated to 
 
 - **User Authentication:** JSON Web Tokens (JWT)
 
+## Backend Engines Installation
 
+Before you begin, ensure you have the following installed:
+
+- [Node.js](https://nodejs.org/)
+- [Express.js](https://expressjs.com/)
+- [MySQL](https://www.mysql.com/)
+- Optional: nodemon, dotenv
+
+You can install Express.js and EJS by running the following commands:
+
+```bash
+npm init
+npm i --save express mysql nodemon dotenv
+```
