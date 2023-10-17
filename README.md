@@ -58,6 +58,10 @@ Start the apache and mySQL server options.
 # Similar Websites:
 ## https://www.epicurious.com/
 
-<img width="700" alt="image" src="https://github.com/anhnguyen148/savory-journey-website/assets/112355299/d34a6123-bce3-4556-8dce-6a0df5d45c1e">
+<img width="800" alt="image" src="https://github.com/anhnguyen148/savory-journey-website/assets/112355299/d34a6123-bce3-4556-8dce-6a0df5d45c1e">
+
+## https://www.allrecipes.com/
+
+<img width="800" alt="image" src="https://github.com/anhnguyen148/savory-journey-website/assets/112355299/add607bd-3b85-4caf-8603-5cc71127ec66">
 
 
