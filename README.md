@@ -55,5 +55,9 @@ Start the apache and mySQL server options.
 
 ![phpmyadmin](https://github.com/anhnguyen148/savory-journey-website/assets/122556080/c4eb23af-1075-4088-acea-039d960371e9)
 
+# Similar Websites:
+## https://www.epicurious.com/
+
+<img width="700" alt="image" src="https://github.com/anhnguyen148/savory-journey-website/assets/112355299/d34a6123-bce3-4556-8dce-6a0df5d45c1e">
 
 
