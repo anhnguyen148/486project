@@ -1,7 +1,8 @@
 # Savory Journey Recipe Website
 
 Welcome to the "Savory Journey" recipe website! This is a platform dedicated to food enthusiasts and home chefs, allowing you to explore a world of flavors, cultures, and culinary traditions. Whether you're looking for mouthwatering recipes, culinary inspiration, or simply a culinary adventure, you've come to the right place.
-![image](https://github.com/anhnguyen148/savory-journey-website/assets/112355299/22b8e085-ef24-4ac3-82d9-9f5630909734)
+![image](https://github.com/anhnguyen148/savory-journey-website/assets/112355299/6dab5032-f4f6-4db5-90a6-66439a824a44)
+
 
 ## Contributing
 - [Anh Nguyen](https://github.com/anhnguyen148) - Frontend
