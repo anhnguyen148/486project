@@ -45,6 +45,12 @@ npm init
 npm i --save express mysql nodemon dotenv
 ```
 
+Server running commands:
+
+```bash
+nodemon server.js
+```
+
 ## Accessing your local database
 
 You can access your local mySQL database after starting the server via node.js or other software such as XAMPP. 
