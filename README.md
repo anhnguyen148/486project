@@ -6,6 +6,7 @@ Welcome to the "Savory Journey" recipe website! This is a platform dedicated to 
 
 
 ## Contributing
+### A&A Team:
 - [Anh Nguyen](https://github.com/anhnguyen148) - Frontend
 - [Aaron Phenicie](https://github.com/phenicieaaron) - Backend
 
