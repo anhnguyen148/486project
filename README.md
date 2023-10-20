@@ -2,7 +2,11 @@
 
 Welcome to the "Savory Journey" recipe website! This is a platform dedicated to food enthusiasts and home chefs, allowing you to explore a world of flavors, cultures, and culinary traditions. Whether you're looking for mouthwatering recipes, culinary inspiration, or simply a culinary adventure, you've come to the right place.
 
+![image](https://github.com/anhnguyen148/savory-journey-website/assets/112355299/6dab5032-f4f6-4db5-90a6-66439a824a44)
+
+
 ## Contributing
+### A&A Team:
 - [Anh Nguyen](https://github.com/anhnguyen148) - Frontend
 - [Aaron Phenicie](https://github.com/phenicieaaron) - Backend
 
@@ -20,27 +24,11 @@ Welcome to the "Savory Journey" recipe website! This is a platform dedicated to 
 
 - **Frontend:** HTML, CSS, Bootstrap 5, Vanilla JavaScript, jQuery
 
-- **Backend:** Node.js, Express.js
+- **Backend:** PHP
 
 - **Database:** MySQL
 
-- **User Authentication:** JSON Web Tokens (JWT)
-
-## Backend Engines Installation
-
-Before you begin, ensure you have the following installed:
-
-- [Node.js](https://nodejs.org/)
-- [Express.js](https://expressjs.com/)
-- [MySQL](https://www.mysql.com/)
-- Optional: nodemon, dotenv
-
-You can install Express.js and EJS by running the following commands:
-
-```bash
-npm init
-npm i --save express mysql nodemon dotenv
-```
+- **User Authentication:** PHP Tokens, Session
 
 ## Accessing your local database
 
@@ -54,14 +42,3 @@ Start the apache and mySQL server options.
 --Visit localhost in your preferred browser and select phpMyAdmin.
 
 ![phpmyadmin](https://github.com/anhnguyen148/savory-journey-website/assets/122556080/c4eb23af-1075-4088-acea-039d960371e9)
-
-# Similar Websites:
-## https://www.epicurious.com/
-
-<img width="800" alt="image" src="https://github.com/anhnguyen148/savory-journey-website/assets/112355299/d34a6123-bce3-4556-8dce-6a0df5d45c1e">
-
-## https://www.allrecipes.com/
-
-<img width="800" alt="image" src="https://github.com/anhnguyen148/savory-journey-website/assets/112355299/add607bd-3b85-4caf-8603-5cc71127ec66">
-
-
