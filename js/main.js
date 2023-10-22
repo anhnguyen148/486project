@@ -1,7 +1,7 @@
 $(document).ready(function() {
   console.log("Savory Journey v1.0.0");
   
-  fetch("http://localhost:3001/recipes")
+  fetch("https://qanguyen.net/recipes-backend/getAllRecipes.php")
     .then(response => response.json())
     .then(json => {
       // RECIPES (recipes.html)
@@ -112,7 +112,7 @@ $(document).ready(function() {
 });
 
 function getStarted() {
-  window.location.href = "http://localhost:5500/recipes.html";
+  window.location.href = "https://anhnguyen148.github.io/recipe-test/recipes.html";
 }
 
 
