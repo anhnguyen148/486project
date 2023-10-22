@@ -112,7 +112,7 @@ $(document).ready(function() {
 });
 
 function getStarted() {
-  window.location.href = "https://anhnguyen148.github.io/recipe-test/recipes.html";
+  window.location.href = "https://anhnguyen148.github.io/savory-journey-website/recipes.html";
 }
 
 
