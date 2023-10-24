@@ -131,7 +131,7 @@ function updateNavbar() {
 }
 
 function openModal(id) {
-  fetch(`https://localhost/recipes-backend/getRecipe.php?Id=${id}`)
+  fetch(`https://qanguyen.net/recipes-backend/getRecipe.php?Id=${id}`)
   .then(response => response.json())
   .then(json => {
     let recipe = json.data;
