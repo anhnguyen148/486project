@@ -148,6 +148,16 @@ body {
     font-size: larger;
 }
 
+.dropdown-menu {
+    min-width: auto;
+    background-color: var(--main-color);
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+    /* font-weight: bold; */
+    color: rgb(225, 95, 47);
+    background-color: transparent;
+}
 /*////////////////////////////*/
 /*           LANDING          */
 /*////////////////////////////*/
@@ -765,6 +775,13 @@ input:checked~.checkmark {
     font-family: var(--sacra);
     font-size: 3rem;
     color: black;
+}
+
+.modal-savory {
+    font-family: var(--sacra);
+    font-size: 2rem;
+    color: black;
+    text-align: right;
 }
 
 ul li::marker {
