@@ -14,16 +14,16 @@ $(document).ready(function () {
       },
       body: JSON.stringify(user)
     })
-      .then(response => response.json())
-      .then(json => {
-        console.log(json);
-        if (json.message === "success") {
-          localStorage.setItem("user", JSON.stringify(json.data));
-          window.location.href = "http://localhost:5500/";
-        } else {
-          alert("Invalid email or password");
-        }
-      });
+    .then(response => response.json())
+    .then(json => {
+      console.log(json);
+      if (json.message === "success") {
+        localStorage.setItem("user", JSON.stringify(json.data));
+        window.location.href = "https://anhnguyen148.github.io/savory-journey-website/profile.html";
+      } else {
+        alert("Invalid email or password");
+      }
+    });
   });
 });
 
