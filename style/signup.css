@@ -141,3 +141,8 @@ body {
     color: #FF512F;
     text-decoration: none;
 }
+
+.message {
+    color: red;
+    font-style: italic;
+}

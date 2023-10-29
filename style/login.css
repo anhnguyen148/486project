@@ -148,3 +148,8 @@ p {
     text-decoration: none;
 }
 
+.message {
+    color: red;
+    font-style: italic;
+}
+
