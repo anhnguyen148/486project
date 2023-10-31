@@ -16,7 +16,7 @@
 body {
     background-image: url("../assets/bg-full.jpg");
     /* background-repeat: repeat-y; */
-    background-size: contain;
+    background-size: cover;
     color: var(--main-color);
     font-family: var(--inria);
 }
