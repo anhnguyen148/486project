@@ -136,7 +136,7 @@ function updateNavbar() {
 }
 
 function openModal(id) {
-  fetch(back + "getRecipe.php?Id=${id}")
+  fetch(back + `getRecipe.php?Id=${id}`)
   .then(response => response.json())
   .then(json => {
     let recipe = json.data;
