@@ -1,7 +1,7 @@
-// var front = "https://anhnguyen148.github.io/savory-journey-website/";
-// var back = "https://qanguyen.net/recipes-backend/";
-var front = "http://localhost:5500/";
-var back = "http://localhost/recipes-backend/";
+var front = "https://anhnguyen148.github.io/savory-journey-website/";
+var back = "https://qanguyen.net/recipes-backend/";
+// var front = "http://localhost:5500/";
+// var back = "http://localhost/recipes-backend/";
 
 $(document).ready(function() {
   console.log("Savory Journey v1.0.0");
