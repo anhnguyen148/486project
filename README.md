@@ -30,9 +30,13 @@ This website was built to provide an easy, quick, and free way to avoid having t
 
 - **Backend:** PHP
 
-- **Database:** MySQL
+- **Database:** MySQL, deployed with cp1.awardspace.net
 
 - **User Authentication:** PHP Tokens, Session
+
+## ER Diagram
+![20231102_082424](https://github.com/anhnguyen148/savory-journey-website/assets/122556080/b49b5999-8af7-4e2a-b8fa-6578f3b1a727)
+
 
 ## Accessing your local database
 
