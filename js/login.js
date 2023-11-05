@@ -1,7 +1,7 @@
-var front = "https://anhnguyen148.github.io/savory-journey-website/";
-var back = "https://qanguyen.net/recipes-backend/";
-// var front = "http://localhost:5500/";
-// var back = "http://localhost/recipes-backend/";
+// const front = "https://qanguyen.net/savory-journey/";
+// const back = "https://qanguyen.net/recipes-backend/";
+const front = "http://localhost:5500/";
+const back = "http://localhost/recipes-backend/";
 
 $(document).ready(function () {
 
@@ -23,17 +23,32 @@ $(document).ready(function () {
     user.append('username', username);
     user.append('password', password);
 
+    // grab a token
     fetch(back + "login.php", {
       method: "POST",
       body: user
     })
     .then(response => response.json())
     .then(json => {
-      // console.log(json);
       if (json.status === "OK") {
-        localStorage.setItem("user", JSON.stringify(json.data));
-        localStorage.setItem('token', JSON.stringify(json.data.token));
-        window.location.href = front + "profile.html";
+        let data = json.data;
+        // validate token
+        let token = json.data.token;
+        fetch(back + "tokenValidation.php", {
+          method: "GET",
+          headers: {
+            "Authorization": "Bearer " + token,
+            "Username": username
+          }
+        }).then(response => response.json())
+        .then(json => {
+          if (json.status === "OK") {
+            localStorage.setItem("user", JSON.stringify(data));
+            window.location.href = front + "index.html";
+          } else { // invalid token
+            $('.message').text(json.message);
+          }
+        });
       } else { // status === "NOT OK"
         $('.message').text(json.message);
       }

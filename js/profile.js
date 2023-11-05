@@ -1,17 +1,51 @@
-var front = "https://anhnguyen148.github.io/savory-journey-website/";
-var back = "https://qanguyen.net/recipes-backend/";
-// var front = "http://localhost:5500/";
-// var back = "http://localhost/recipes-backend/";
+// const front = "https://qanguyen.net/savory-journey/";
+// const back = "https://qanguyen.net/recipes-backend/";
+const front = "http://localhost:5500/";
+const back = "http://localhost/recipes-backend/";
 
 $(document).ready(function() {
-  console.log("Savory Journey v1.0.0");
   
   updateNavbar();
 
-  var userToken = JSON.parse(localStorage.getItem('token'));
-  
+  var fname = JSON.parse(localStorage.getItem('user')).first_name;
+  $('.profile-h1').append(fname);
 
-    
+  // load all faverite recipes
+  var userId = JSON.parse(localStorage.getItem('user')).userId;
+  fetch(back + `getFavRecipe.php?Id=${userId}`)
+  .then(response => response.json())
+  .then(json => {
+    let favRecipeIds = json.data.map(Number);
+    console.log(favRecipeIds);
+    fetch(back + "getAllRecipes.php")
+    .then(response => response.json())
+    .then(json => {
+      const recipes = json.data;
+
+      favRecipeIds.forEach(id => {
+        for (let i = 0; i < recipes.length; i++) {
+          if (recipes[i].recipeId == id) {
+            let recipe = recipes[i];
+            $(".fav-list-container").append(`
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card recipe">
+                  <div class="card-image">
+                    <img src="assets/${recipe.image}">
+                  </div>
+                  <div class="card-text">
+                    <p class="card-meal-type">${recipe.type}</p>
+                    <h2 class="recipe-name">${recipe.recipeName}</h2>
+                    <p>${recipe.intro}</p>
+                    <button class="btn-small" onclick="openModal(${id})">Details</button><button class="btn-rmv" onclick="removeRecipe(${userId}, ${id})">Remove</button>
+                  </div>
+                </div>
+              </div>
+            `);
+          }
+        }
+      })
+    });
+  });
 });
 
 // function for updating navbar, if user loged in, show logout and profile link, otherwise show login link
@@ -28,7 +62,7 @@ function updateNavbar() {
 }
 
 function openModal(id) {
-  fetch(back + "getRecipe.php?Id=${id}")
+  fetch(back + `getRecipe.php?Id=${id}`)
   .then(response => response.json())
   .then(json => {
     let recipe = json.data;
@@ -39,29 +73,6 @@ function openModal(id) {
             <div class="col-lg-5 col-md-12 col-sm-12">
               <div class="modal-header">
                 <h4 class="modal-title">${recipe.recipeName}</h4>
-                <div class="heart-container" title="Like">
-                  <input type="checkbox" class="checkbox" id="favClick" onchange="isChecked(${recipe.recipeId})"/>
-                  <div class="svg-container">
-                    <svg viewBox="0 0 24 24" class="svg-outline" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
-                      </path>
-                    </svg>
-                    <svg viewBox="0 0 24 24" class="svg-filled" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
-                      </path>
-                    </svg>
-                    <svg class="svg-celebrate" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
-                      <polygon points="10,10 20,20"></polygon>
-                      <polygon points="10,50 20,50"></polygon>
-                      <polygon points="20,80 30,70"></polygon>
-                      <polygon points="90,10 80,20"></polygon>
-                      <polygon points="90,50 80,50"></polygon>
-                      <polygon points="80,80 70,70"></polygon>
-                    </svg>
-                  </div>
-                </div>
               </div>
               <img class="modal-img" src="assets/${recipe.image}" alt="${recipe.recipeName}">
               <hr class="sub-line">
@@ -104,7 +115,7 @@ function openModal(id) {
     `);
     $("#ingredientsList").append(recipe.ingredientList.map(ingredient => `<li>${ingredient.ingredientDetail}</li>`));
     $("#directionsList").append(recipe.directionList.map(direction => `<li>${direction.directionDetail}</li>`));
-  });
+  });  
   // load data then show the modal
   $(".myModal").modal("show");
 }
@@ -122,14 +133,35 @@ $("#myModal").on("click", function (e) {
   }
 });
 
-// handle save checkbox click on recipe modal
-function isChecked(id) {
-  $("#favClick").on("click", function() {
-    if($(this).is(":checked")){
-      console.log("recipe id: " + id);
+function removeRecipe(userId, recipeId) {
+  let token = JSON.parse(localStorage.getItem("user")).token;
+  let username = JSON.parse(localStorage.getItem('user')).username;
+  fetch(back + "tokenValidation.php", {
+    method: "GET",
+    headers: {
+      "Authorization": "Bearer " + token,
+      "Username": username
     }
-    else if($(this).is(":not(:checked)")){
-      console.log("Checkbox is unchecked.");
+  }).then(response => response.json())
+  .then(json => {
+    if (json.status === "OK") {
+      let data = new FormData();
+      data.append('userId', userId);
+      data.append('recipeId', recipeId);
+      fetch(back + "removeRecipe.php", {
+        method: "POST",
+        body: data
+      }).then(response => response.json())
+      .then(json => {
+        if (json.status === "OK") {
+          alert(json.message);
+          window.location.reload();
+        } else { // status === "NOT OK"
+          alert(json.message);
+        }
+      });
+    } else { // invalid token
+      $('.message').text(json.message);
     }
   });
 }

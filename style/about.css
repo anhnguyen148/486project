@@ -258,7 +258,7 @@ button {
     width: 300px;
     background-color: #1D1C20;
     color: var(--main-color);
-    padding: 20px;
+    padding: 13px;
 }
 
 .card-meal-type {
