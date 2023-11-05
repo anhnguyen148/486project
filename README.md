@@ -28,7 +28,7 @@ Welcome to the "Savory Journey" recipe website! This is a platform dedicated to 
 
 - **Database:** MySQL
 
-- **User Authentication:** PHP Tokens, Session
+- **User Authentication:** JWT, Token, Browser's LocalStorage
 
 ## Accessing your local database
 
