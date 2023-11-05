@@ -1,7 +1,5 @@
-// const front = "https://qanguyen.net/savory-journey/";
-// const back = "https://qanguyen.net/recipes-backend/";
-const front = "http://localhost:5500/";
-const back = "http://localhost/recipes-backend/";
+const front = "https://qanguyen.net/savory-journey/";
+const back = "https://qanguyen.net/recipes-backend/";
 
 $(document).ready(function () {
 
