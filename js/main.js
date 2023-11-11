@@ -52,6 +52,31 @@ $(document).ready(function() {
           </div>
         </div>
       `);
+      //SEARCH BAR (recipes.html)
+      $("#search-value").on("keyup", function() {
+        $(".special-recipe-container").empty();
+        $(".recipes-list-container").empty();
+        let searchValue = $("#search-value").val().toLowerCase();
+        let filterData = allRecipes.filter(recipe => recipe.recipeName.toLowerCase().includes(searchValue));
+
+        filterData.forEach(recipe => {
+          $(".recipes-list-container").append(`
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="card recipe">
+                <div class="card-image">
+                  <img src="assets/${recipe.image}">
+                </div>
+                <div class="card-text">
+                  <p class="card-meal-type">${recipe.type}</p>
+                  <h2 class="recipe-name">${recipe.recipeName}</h2>
+                  <p>${recipe.intro}</p>
+                  <button class="btn-small" onclick="openModal(${recipe.recipeId})">Details</button>
+                </div>
+              </div>
+            </div>
+          `);
+        });
+      });
       // TODAY'S RECIPE (index.html)
       $(".todays-recipe-container").append(`
         <div class="row justify-content-center">

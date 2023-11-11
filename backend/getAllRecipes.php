@@ -4,10 +4,10 @@ include 'function.inc.php';
 
 enable_cors();
 
-$host = "";
-$username = "";
+$host = "qanguyen.net";
+$username = "qnguyen3";
 $password = "";
-$database = "";
+$database = "savoryjourney";
 
 // Create a connection to the database
 $conn = new mysqli($host, $username, $password, $database);

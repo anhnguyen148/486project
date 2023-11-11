@@ -12,10 +12,10 @@ $(document).ready(function () {
     let password = $("#password").val();
     let passwordConfirm = $("#passwordConfirm").val();
 
-    // if (!fname) {
-    //   $('.message').text('Please enter your first name.');
-    //   return;
-    // }
+    if (!fname) {
+      $('.message').text('Please enter your first name.');
+      return;
+    }
     if (!lname) {
       $('.message').text('Please enter your last name.');
       return;

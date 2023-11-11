@@ -3,10 +3,10 @@ include 'function.inc.php';
 
 enable_cors();
 
-$host = "";
-$username = "";
+$host = "qanguyen.net";
+$username = "qnguyen3";
 $password = "";
-$database = "";
+$database = "savoryjourney";
 
 $recipeId = isset($_GET['Id']) ? $_GET['Id'] : null;
 
@@ -30,28 +30,32 @@ $sql = "SELECT
             r.*, d.directionDetail, d.directionId, i.ingredientId, i.ingredientDetail 
         FROM 
             recipes r 
-        LEFT JOIN 
+        JOIN 
             directions d ON r.recipeId = d.recipeId 
-        LEFT JOIN 
+        JOIN 
             ingredients i ON r.recipeId = i.recipeId 
         WHERE 
             r.recipeId =  $recipeId";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    $recipe = $result->fetch_assoc();
+    $data = $result->fetch_assoc();
+
+    $recipe = [
+        "recipeId" => $data["recipeId"],
+        "recipeName" => $data["recipeName"],
+        "type" => $data["type"],
+        "level" => $data["level"],
+        "intro" => $data["intro"],
+        "image" => $data["image"],
+        "ingredientList" => [],
+        "directionList" => []
+    ];
 
     $ingredientIds = array();
     $directionIds = array();
 
     while ($row = $result->fetch_assoc()) {
-        if (!in_array($row['ingredientId'], $ingredientIds)) {
-            $ingredientIds[] = $row['ingredientId'];
-            $recipe['ingredientList'][] = array(
-                'ingredientId' => $row['ingredientId'],
-                'ingredientDetail' => $row['ingredientDetail']
-            );
-        }
         if (!in_array($row['directionId'], $directionIds)) {
             $directionIds[] = $row['directionId'];
             $recipe['directionList'][] = array(
@@ -59,7 +63,19 @@ if ($result->num_rows > 0) {
                 'directionDetail' => $row['directionDetail']
             );
         }
+        if (!in_array($row['ingredientId'], $ingredientIds)) {
+            $ingredientIds[] = $row['ingredientId'];
+            $recipe['ingredientList'][] = array(
+                'ingredientId' => $row['ingredientId'],
+                'ingredientDetail' => $row['ingredientDetail']
+            );
+        }
     }
+
+    usort($recipe['ingredientList'], function ($a, $b) {
+        return $a['ingredientId'] - $b['ingredientId'];
+    });
+
     $response = array(
         'status' => 'OK',
         'message' => 'Recipe successfully retrieved',
