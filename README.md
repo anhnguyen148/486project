@@ -30,15 +30,3 @@ Welcome to the "Savory Journey" recipe website! This is a platform dedicated to 
 
 - **User Authentication:** JWT, Token, Browser's LocalStorage
 
-## Accessing your local database
-
-You can access your local mySQL database after starting the server via node.js or other software such as XAMPP. 
-
---Example from XAMPP:
-Start the apache and mySQL server options.
-
-![image](https://github.com/anhnguyen148/savory-journey-website/assets/122556080/ec936e1e-ad99-4f7a-a2eb-0ad51fdecc64)
-
---Visit localhost in your preferred browser and select phpMyAdmin.
-
-![phpmyadmin](https://github.com/anhnguyen148/savory-journey-website/assets/122556080/c4eb23af-1075-4088-acea-039d960371e9)
