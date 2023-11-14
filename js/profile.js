@@ -134,32 +134,24 @@ $("#myModal").on("click", function (e) {
 function removeRecipe(userId, recipeId) {
   let token = JSON.parse(localStorage.getItem("user")).token;
   let username = JSON.parse(localStorage.getItem('user')).username;
-  fetch(back + "tokenValidation.php", {
-    method: "GET",
+
+  let data = new FormData();
+  data.append('userId', userId);
+  data.append('recipeId', recipeId);
+  fetch(back + "removeRecipe.php", {
+    method: "POST",
     headers: {
       "Authorization": "Bearer " + token,
       "Username": username
-    }
+    },
+    body: data
   }).then(response => response.json())
   .then(json => {
     if (json.status === "OK") {
-      let data = new FormData();
-      data.append('userId', userId);
-      data.append('recipeId', recipeId);
-      fetch(back + "removeRecipe.php", {
-        method: "POST",
-        body: data
-      }).then(response => response.json())
-      .then(json => {
-        if (json.status === "OK") {
-          alert(json.message);
-          window.location.reload();
-        } else { // status === "NOT OK"
-          alert(json.message);
-        }
-      });
-    } else { // invalid token
-      $('.message').text(json.message);
+      alert(json.message);
+      window.location.reload();
+    } else { // status === "NOT OK"
+      alert(json.message);
     }
   });
 }
