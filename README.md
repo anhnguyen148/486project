@@ -18,7 +18,7 @@ Welcome to the "Savory Journey" recipe website! This is a platform dedicated to 
 
 - **User Profiles:** Keep track of your favorite recipes, and manage your settings.
 
-- **User experience:** Our website works best on desktop browser.
+- **User experience:** At this time, the website works best on desktop browser.
 
 ## Technologies Used
 
